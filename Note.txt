@@ -47,8 +47,9 @@ Data Types:
 Operators:
 ===============
 Arithmetic: +-/*% [Follow BODMAS Rule]
-Logical: > < >= <= >== <== == ===
+Conditional: > < >= <= >== <== == ===
 typeof operator
+Logical Operator: && || !
 
 +++++++++++++++
 Personal Notes:
@@ -62,3 +63,4 @@ Links:
 2. Undefined is not equal to Not defined - 
 3. var vs let vs const - 
 4. Operator Precedence - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+5. Expressions and Operators - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators
