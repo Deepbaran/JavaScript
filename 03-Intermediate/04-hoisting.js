@@ -68,3 +68,8 @@ function sayName() {
 console.log(name); //Deep <- The Execution Context of MR. D is not at the top, the Execution Context with name Deep is at the right now. That's why for the value of name, Deep came instead of MR. D
 sayName(); //Now the Excution Context with name as MR. D is at the top. But as soon as the Execution of the function gets finished, theis Execution Context goes away and the Execution Context with name as Deep again comes at the top.
 console.log(name); //Deep
+
+console.log(a);
+{
+  var a = "Kar";
+}

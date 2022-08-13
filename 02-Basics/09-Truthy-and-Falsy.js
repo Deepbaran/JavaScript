@@ -46,6 +46,7 @@ console.log(true + false); //1 -> true is coerced to 1 and false is coerced to 0
 //== Type coercion occurs in this. This compares the two sides after performing type coersion
 //Loose check
 if (2 == "2") {
+  //Checking only the value. Not the type
   //2 is coerced to "2"
   //JS thinks we are trying to say loosely 2, whether its a number 2 or String 2, it just compares them loosely
   //It does not check the types.
@@ -55,6 +56,7 @@ if (2 == "2") {
 //===
 //Tight/Strict check
 if (2 === "2") {
+  //Checking type as well as the value.
   //Nothing is coerced here.
   //In here not only values, but the types are also checked.
   //JS will not assume anything
