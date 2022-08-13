@@ -39,7 +39,7 @@ Data Types:
 3. String
 4. Null
 5. Undefined (!= Not defined)
-6. Object
+6. Object (Array is also considered as a Object in JS)
 7. Symbol
 8. BigInt
 
@@ -56,6 +56,8 @@ Personal Notes:
 +++++++++++++++
 - Interpolation: JavaScript string interpolation is the process of embedding an expression into part of a string. A template literal is used to embed expressions. You can add values such as variables and mathematical calculations into a string using interpolation.
 - Use template literals (``) when adding variables into strings instead of string literals ('').
+- Strings are immutable in JS.
+- Even if an array or object are assigned as const, we can change the values inside it as the const variable is referring the object stored in the memory and not it's values.
 
 +++++++++++++++
 Links:
@@ -66,3 +68,8 @@ Links:
 4. Operator Precedence - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
 5. Expressions and Operators - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators
 6. JavaScript Context
+7. Lexical Scope
+8. Memory Reservation and call of the Memory
+9. Sortng Array
+10. Callback Function - https://developer.mozilla.org/en-US/docs/Glossary/Callback_function
+11. Closure

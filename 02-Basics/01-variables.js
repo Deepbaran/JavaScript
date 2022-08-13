@@ -18,3 +18,8 @@ console.log(paymentMode);
 
 paymentMode = "Credit Card";
 console.log(paymentMode);
+
+// Getting individual elements from a String
+var user = "Deep";
+console.log(user[0]);
+console.log(user.charAt(0));

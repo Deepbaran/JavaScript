@@ -10,10 +10,12 @@ Execution Context does not only execute a line or function. It brings us couple 
 
 The Execution context that is at the top of the Context stack, is the only one that our program knows about. So, if there are multiple variables being defined inside that Execution Context, it cannot dig below it and try to find that variable.
 
+Anything that is inside a fuction is in a function scope and will be inside a Execution context that is executing the function. Everything else including code blocks, if-else, switch-case, etc are in the Global scope, so they will be inside the Global Context and can access everythin inside the Global Context. We can access variables in the same context.
+
 ||Execution Context||
 ||Execution Context||
 ||Execution Context||
-||Global Context||
+||Global Context   ||
 
 If there is not function to Execute then Execution Context comes and goes and all the values gets stored in Global Context.
 
@@ -69,7 +71,14 @@ console.log(name); //Deep <- The Execution Context of MR. D is not at the top, t
 sayName(); //Now the Excution Context with name as MR. D is at the top. But as soon as the Execution of the function gets finished, theis Execution Context goes away and the Execution Context with name as Deep again comes at the top.
 console.log(name); //Deep
 
-console.log(a);
+console.log(a); //Undefined <- This is udefined because var a exists in the global scope so it is in the Global Context.
 {
   var a = "Kar";
 }
+console.log(a); //Kar
+
+// console.log(b); //ERROR
+function fun() {
+  var b = "cat"; //variable b only exists inside this function's execution context
+}
+// console.log(b); //ERROR
