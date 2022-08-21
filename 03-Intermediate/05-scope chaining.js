@@ -1,6 +1,8 @@
 /*
 Scope Chaining: If a scope does not have a thing then it will ask it's parent scope for it, and it also does not have the scope then it will also ask it's parent scope for this variable and this will go on till the thing is found. The scope will stop searching for the thing as soon as it gets the thing.
 
+Scope chaining is possible only because the contexts get mounted on top each other and we drill down below and find the varaibales.
+
 REMEMBER - Scopes will not search for things inside their child scopes.
 
 The ancestor of all scopes is Global scope.

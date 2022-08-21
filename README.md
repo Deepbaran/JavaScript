@@ -1,2 +1,120 @@
 # JavaScript
+
 This repository contains all the JavaScript codes that I learned while starting to learn Frontend Development.
+
+# Notes:
+
++++++++++++++++
+Topics:
++++++++++++++++
+===============
+JS Engine:
+===============
+
+- JS needs a set of tool/sw so that the JS code can be converted to the Machine understandable code.
+- Browsers comes up with a compiler that can turn the JS code into executable code.
+- JS Engines:
+
+1. Google - V8
+2. Mozilla - Spider Monkey
+
+- JS is run by any of the two ways:
+
+1. Interpreter
+2. JIT (Just In Time Compiler)
+
+- JS is a interpreted language.
+
+===============
+ECMAScript:
+===============
+
+- JavaScript with guidelines.
+- ES6: 2015
+- ES8: 2017
+- ES10
+
+===============
+Variables:
+===============
+var - These are Functional scoped. This means that once declared, they are accessible through out the function or if declared in global scope then is accessible throughout the code. We can redeclare a var variable. Hoisting is also happens to them unless stopped by using the strict keyword.
+
+let - These are block scoped. These act as normal variables. We cannot redeclare a let variable.
+
+const - Same as let but once assigned cannot be reassigned. const must be defined while being declared.
+
+===============
+Data Types:
+===============
+
+1. Number
+2. Boolean
+3. String
+4. Null
+5. Undefined (!= Not defined)
+6. Object (Array is also considered as a Object in JS)
+7. Symbol
+8. BigInt
+
+===============
+Operators:
+===============
+
+1. Arithmetic: +-/\*% [Follow BODMAS Rule]
+2. Conditional: > < >= <= >== <== == ===
+3. typeof operator
+4. Logical Operator: && || !
+
+===============
+DOM:
+===============
+Methods to grab HTML elements: [Read more]
+
+---
+
+1. document.getElementsTagName()
+2. document.getElementsById()
+3. document.getElementsByClass()
+4. document.querySelector()
+5. document.querySelectorAll()
+
+elements:
+
+---
+
+- innerHTML is used to grab the inner HTML element or content inside the element.
+- innerText is used to grab the inner Text of the element.
+- style is used to change the CSS of the element.
+
++++++++++++++++
+Personal Notes:
++++++++++++++++
+
+- Interpolation: JavaScript string interpolation is the process of embedding an expression into part of a string. A template literal is used to embed expressions. You can add values such as variables and mathematical calculations into a string using interpolation.
+- Use template literals (``) when adding variables into strings instead of string literals ('').
+- Strings are immutable in JS.
+- Even if an array or object are assigned as const, we can change the values inside it as the const variable is referring the object stored in the memory and not it's values.
+- Technically Functions are considered as a Scope in HS and the others with {} such as loops and conditionals are not considered as a scope.
+- For all REGULAR FUNCTION CALLS, this points to window object or the global object.
+- DOM (Document Object Model): The Document Object Model (DOM) is an application programming interface (API) for HTML and XML documents. It defines the logical structure of documents and the way a document is accessed and manipulated.
+- Everything is a doument in DOM.
+- The DOM API is one of the multiple web APIs built into web browsers.
+- Two main APIs in DOM are document and window.
+
++++++++++++++++
+Links:
++++++++++++++++ 0. DOM - https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
+
+1. Null vs Undefined -
+2. Undefined is not equal to Not defined -
+3. var vs let vs const -
+4. Operator Precedence - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+5. Expressions and Operators - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators
+6. JavaScript Context
+7. Lexical Scope
+8. Memory Reservation and call of the Memory
+9. Sortng Array
+10. Callback Function - https://developer.mozilla.org/en-US/docs/Glossary/Callback_function
+11. Closure
+12. innerText vs innerHTML
+13. Events - https://developer.mozilla.org/en-US/docs/Web/Events

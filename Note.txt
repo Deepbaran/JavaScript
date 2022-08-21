@@ -25,7 +25,7 @@ ECMAScript:
 ===============
 Variables:
 ===============
-var - These are Functional scoped. This means that once declared, they are accessible through out the function or if declared in global scope then is accessible throughout the code. We can redeclare a var variable. Hoisting is also happens to them unless stopped by using the strict keyword.
+var - These are Functional scoped or lexical scoped. This means that once declared, they are accessible through out the function or if declared in global scope then is accessible throughout the code. We can redeclare a var variable. Hoisting is also happens to them unless stopped by using the strict keyword.
 
 let - These are block scoped. These act as normal variables. We cannot redeclare a let variable.
 
@@ -81,6 +81,12 @@ Personal Notes:
 - Everything is a doument in DOM.
 - The DOM API is one of the multiple web APIs built into web browsers.
 - Two main APIs in DOM are document and window.
+- In JavaScript everyting is kind of object (including functions).
+- Arrays are a special type of objects. The typeof operator in JavaScript returns "object" for arrays. But, JavaScript arrays are best described as arrays.
+- Arrays are Objects in JS.
+- Nearly all objects in JavaScript are instances of Object; a typical object inherits properties (including methods) from Object.prototype
+- __proto__ shows the attributes inherited by the child object from its parent and the parent's __proto__ shows the attributes it inherited from it's parent and it goes on till the __proto__ becomes null and this chain of __proto__ is called prototype chaining.
+- In functional programming functions are used as varaibles.
 
 +++++++++++++++
 Links:
@@ -99,3 +105,5 @@ Links:
 11. Closure
 12. innerText vs innerHTML
 13. Events - https://developer.mozilla.org/en-US/docs/Web/Events
+14. Object - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
+15. Prototypal Inheritance

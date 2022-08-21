@@ -3,9 +3,9 @@
 // setTimeout(function, milliseconds)
 // setInterval(function, milliseconds)
 
-// setTimeout(function, milliseconds): We define a millisecond as duration for which the timeout (paus the execution of the code) occurs and then the function (callback) gets executed. So, pause for a defined millisecond then do the task in the function. [Timeout for a particular millisecond then resume palying (callback)]
+// setTimeout(function, milliseconds): We define a millisecond as duration for which the timeout (paus the execution of the code) occurs and then the function (callback) gets executed. So, pause for a defined millisecond then do the task in the function. (How much time to wait before executing the function) [Timeout for a particular millisecond then resume palying (callback)]
 
-// setInterval(function, milliseconds): For a given duration (milliseconds) the function (callback) keeps on executing. So, the callback will take x milliseconds to execute and till that x milliseconds are over, the callback will not execute again and once the time is up it will execute again and his will contiue until we give a condition for the setInterval to be over.  [Keep on playing football till defined milliseconds.]
+// setInterval(function, milliseconds): For a given duration (milliseconds) the function (callback) keeps on executing. So, the callback will take x milliseconds to execute and till that x milliseconds are over, the callback will not execute again and once the time is up it will execute again and his will contiue until we give a condition for the setInterval to be over. (In what interval the function will keep on running)  [Keep on playing football till defined milliseconds.]
 
 // setInterval will help in keep on changing the number till we reach  1000
 var counter = document.querySelector(".counter");

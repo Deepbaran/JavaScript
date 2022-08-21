@@ -24,6 +24,8 @@ Whenever there is an Execution Context, there are two rules that we need to foll
 2. Variable declarations are also scanned and made undefined. <- The variable is accessible to the whole code but it remains undefined till it's definition is executed.
 
 These two rules are Hoisting.
+
+Hoisting takes place at the time of code compilation so that while running everything is in place.
 */
 
 // var num = 2; //Execution Context
