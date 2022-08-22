@@ -37,7 +37,7 @@ ECMAScript:
 ===============
 Variables:
 ===============
-var - These are Functional scoped. This means that once declared, they are accessible through out the function or if declared in global scope then is accessible throughout the code. We can redeclare a var variable. Hoisting is also happens to them unless stopped by using the strict keyword.
+var - These are Functional scoped or lexical scoped. This means that once declared, they are accessible through out the function or if declared in global scope then is accessible throughout the code. We can redeclare a var variable. Hoisting is also happens to them unless stopped by using the strict keyword.
 
 let - These are block scoped. These act as normal variables. We cannot redeclare a let variable.
 
@@ -59,11 +59,10 @@ Data Types:
 ===============
 Operators:
 ===============
-
-1. Arithmetic: +-/\*% [Follow BODMAS Rule]
-2. Conditional: > < >= <= >== <== == ===
-3. typeof operator
-4. Logical Operator: && || !
+Arithmetic: +-/\*% [Follow BODMAS Rule]
+Conditional: > < >= <= >== <== == ===
+typeof operator
+Logical Operator: && || !
 
 ===============
 DOM:
@@ -78,9 +77,7 @@ Methods to grab HTML elements: [Read more]
 4. document.querySelector()
 5. document.querySelectorAll()
 
-elements:
-
----
+## elements:
 
 - innerHTML is used to grab the inner HTML element or content inside the element.
 - innerText is used to grab the inner Text of the element.
@@ -100,21 +97,29 @@ Personal Notes:
 - Everything is a doument in DOM.
 - The DOM API is one of the multiple web APIs built into web browsers.
 - Two main APIs in DOM are document and window.
+- In JavaScript everyting is kind of object (including functions).
+- Arrays are a special type of objects. The typeof operator in JavaScript returns "object" for arrays. But, JavaScript arrays are best described as arrays.
+- Arrays are Objects in JS.
+- Nearly all objects in JavaScript are instances of Object; a typical object inherits properties (including methods) from Object.prototype
+- \_\_proto\_\_ shows the attributes inherited by the child object from its parent and the parent's \_\_proto\_\_ shows the attributes it inherited from it's parent and it goes on till the \_\_proto\_\_ becomes null and this chain of \_\_proto\_\_ is called prototype chaining.
+- In functional programming functions are used as varaibles.
+- JavaScript is a single-threaded language, which means it has only one call stack that is used to execute the program.
+- undefined is not an object if JS. But Null is an object.
+- UTF-16 allows us to include chinese, korean, japanese, etc characters as well as emojis.
 
 +++++++++++++++
 Links:
 +++++++++++++++ 0. DOM - https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
 
-1. Null vs Undefined -
-2. Undefined is not equal to Not defined -
-3. var vs let vs const -
+1. Null vs Undefined - https://stackabuse.com/javascript-check-if-variable-is-a-undefined-or-null/
+2. Null vs Undefined vs to Not defined - https://medium.com/technoetics/difference-between-null-undefined-and-not-defined-in-javascript-3a52a62894b
+3. undefined vs Not defined - https://www.geeksforgeeks.org/explain-the-difference-between-undefined-and-not-defined-in-javascript/#:~:text=In%20JavaScript%2C%20they%20both%20are,then%20it%20would%20be%20undefined
 4. Operator Precedence - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
 5. Expressions and Operators - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators
-6. JavaScript Context
-7. Lexical Scope
-8. Memory Reservation and call of the Memory
-9. Sortng Array
-10. Callback Function - https://developer.mozilla.org/en-US/docs/Glossary/Callback_function
-11. Closure
-12. innerText vs innerHTML
-13. Events - https://developer.mozilla.org/en-US/docs/Web/Events
+6. Callback Function - https://developer.mozilla.org/en-US/docs/Glossary/Callback_function
+7. Events - https://developer.mozilla.org/en-US/docs/Web/Events
+8. Object - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
+9. Prototypal Inheritance - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
+10. Event Loop - https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
+11. Promise - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+12. JS Sort - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
