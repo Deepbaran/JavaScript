@@ -1,5 +1,6 @@
 // this keyword creates confusion. It confuses whether it contains the Window object or the Object I have defined.
 // For all REGULAR FUNCTION CALLS, this points to window object or the global object.
+// EXCEPTION: In object if the function is an arrow function, then this will point to the window object and not the object it is defined in.
 
 console.log(this); //Gives window or Global object
 

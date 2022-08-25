@@ -71,6 +71,8 @@ elements:
 +++++++++++++++
 Personal Notes:
 +++++++++++++++
+- Debugging: Inspect > Sources > (Refresh + break point + Call stack)
+- JS is a loosely typed programming language.
 - Interpolation: JavaScript string interpolation is the process of embedding an expression into part of a string. A template literal is used to embed expressions. You can add values such as variables and mathematical calculations into a string using interpolation.
 - Use template literals (``) when adding variables into strings instead of string literals ('').
 - Strings are immutable in JS.
@@ -90,6 +92,11 @@ Personal Notes:
 - JavaScript is a single-threaded language, which means it has only one call stack that is used to execute the program.
 - undefined is not an object if JS. But Null is an object.
 - UTF-16 allows us to include chinese, korean, japanese, etc characters as well as emojis.
+- JS catches runtime errors only.
+- Use Asynchronous code whenever fetching API. During usage of axios or fetch we use Asynchronous JS.
+- Whenever a object is coming, always check if that object is undefined or null using ternary operator. (Basically do a null check)
+- DO debugging in the chrome browser's Sorces tab > page folder. Then put a break point and refresh the page.
+- "use strict": It is not a statement, but a literal expression, ignored by earlier versions of JavaScript. The purpose of "use strict" is to indicate that the code should be executed in "strict mode". With strict mode, you can not, for example, use undeclared variables.
 
 +++++++++++++++
 Links:
@@ -107,3 +114,4 @@ Links:
 10. Event Loop - https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
 11. Promise - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 12. JS Sort - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+13. Polyfill - https://developer.mozilla.org/en-US/docs/Glossary/Polyfill

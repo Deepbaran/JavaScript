@@ -1,5 +1,6 @@
 // Spread and Rest operator: ...
 // This operator changes to either spread operator or the rest operator depending on the challenge that we are facing
+//These are ES6 concepts
 
 //Spread operator turns a group of data into individual datas
 //Rest operator turns individual datas into an array
@@ -42,3 +43,42 @@ function sumTwo(a, ...args) {
 console.log(sumTwo(1, 2, 3, 4, 5)); //[1, 15] <-- 1 will be assigned to a and rest of them will be assigned to args as an array
 
 //So Rest operator converts individual values into an array
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+// Spread and Rest both work on Arrays as well as Object
+
+//Exampe Rest
+function addNumbers(...args) {
+  console.log(arguments); //[Arguments] { '0': 2, '1': 4, '2': 5 } <-- This is ES5 way of getting all the arguments passed to the function
+}
+const res = addNumbers(2, 4, 5);
+console.log(res);
+
+//Example Spread
+var names = ["Deep", "Baran", "Kar"];
+
+function getNames(name1, name2, name3) {
+  console.log(name1, name2, name3);
+}
+getNames(names[0], names[1], names[2]); //Deep Baran Kar
+getNames(...names); //Deep Baran Kar
+getNames(names); //[ 'Deep', 'Baran', 'Kar' ] undefined undefined
+
+//With Object
+//Rest
+var students = {
+  name: "Deep",
+  age: "24",
+  hobbies: ["reading", "Listening to Music"]
+};
+// const age = students.age;
+const { age, ...args } = students; //De-structuring with Rest
+console.log(age); //24
+console.log(args); //{ name: 'Deep', hobbies: [ 'reading', 'Listening to Music' ] }
+
+//Spread
+var newStudent = {
+  ...students,
+  age: "25" //overwrote the age value in students object
+};
+console.log(newStudent); //Copied the values in students object to newStudent and overwrote age

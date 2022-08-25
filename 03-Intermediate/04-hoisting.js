@@ -1,7 +1,7 @@
 /*
 There are two types of context.
-1. Global Context - Collect the information
-2. Execution Context - Execution Context comes and goes away for each line of code. If the code is small then the Execution Context and goes away, but if there is some execution (like sayMe() function call), a big Execution Context comes and once the execution is done, then it will go away. These Execution functions keep stacking on top each other. The first one that stacks at the bottom is Global Context and all the Execution contexts keep stacking on it one by one. As soon as the execution is done, the Execution Context goes away.
+1. Global Execution Context - Collect the information
+2. Functional Execution Context - Execution Context comes and goes away for each line of code. If the code is small then the Execution Context and goes away, but if there is some execution (like sayMe() function call), a big Execution Context comes and once the execution is done, then it will go away. These Execution functions keep stacking on top each other. The first one that stacks at the bottom is Global Context and all the Execution contexts keep stacking on it one by one. As soon as the execution is done, the Execution Context goes away.
 
 Execution Context does not only execute a line or function. It brings us couple of more things. Three Major things it brigs are:
 1. Variable Object
@@ -84,3 +84,7 @@ function fun() {
   var b = "cat"; //variable b only exists inside this function's execution context
 }
 // console.log(b); //ERROR
+
+/*
+Basically at the time of execution, function gets pushed to Global Execution Context (Call Stack in debugger) and once executed, it will be popped out of Global Execution Context (Call Stack in debugger). 
+*/

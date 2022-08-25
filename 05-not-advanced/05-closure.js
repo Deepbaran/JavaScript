@@ -16,6 +16,7 @@ value(); //Deep
 
 function doAddition(x) {
   return function (y) {
+    //This is an anonymous function
     return x + y;
   };
 }
@@ -27,3 +28,20 @@ console.log(res);
 console.log(doAddition(5)(4));
 
 doAddition(5)(4); //This is called Currying
+
+// Lexical Scope - The scope in which a inner function can access the varaibles of it's outer function is called Lexical Scope.
+// Closure - Even after execution of the outer funciton, the inner function can still access its variables because the outer function values are not lost but retained. This is called Closure.
+
+var sum = function (a, b, c) {
+  return {
+    getSumTwo: function () {
+      return a + b;
+    },
+    getSumThree: function () {
+      return a + b + c;
+    }
+  };
+};
+var store = sum(3, 4, 5);
+console.log(store.getSumTwo()); //7
+console.log(store.getSumThree()); //12
