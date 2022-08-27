@@ -97,6 +97,8 @@ Personal Notes:
 - Whenever a object is coming, always check if that object is undefined or null using ternary operator. (Basically do a null check)
 - DO debugging in the chrome browser's Sorces tab > page folder. Then put a break point and refresh the page.
 - "use strict": It is not a statement, but a literal expression, ignored by earlier versions of JavaScript. The purpose of "use strict" is to indicate that the code should be executed in "strict mode". With strict mode, you can not, for example, use undeclared variables.
+- We use the script tag at the end of body so that JS gets loaded after all the contents of the page is loaded. We can declare the script tag in head by using a boolean attribute defer.
+- defer: This Boolean attribute is set to indicate to a browser that the script is meant to be executed after the document has been parsed, but before firing DOMContentLoaded. Scripts with the defer attribute will prevent the DOMContentLoaded event from firing until the script has loaded and finished evaluating. This attribute must not be used if the src attribute is absent (i.e. for inline scripts), in this case it would have no effect. To achieve a similar effect for dynamically inserted scripts use async="false" instead. Scripts with the defer attribute will execute in the order in which they appear in the document.
 
 +++++++++++++++
 Links:
@@ -115,3 +117,7 @@ Links:
 11. Promise - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 12. JS Sort - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 13. Polyfill - https://developer.mozilla.org/en-US/docs/Glossary/Polyfill
+14. ES6
+  a. https://www.freecodecamp.org/news/learn-es6-the-dope-way-part-ii-arrow-functions-and-the-this-keyword-381ac7a32881/
+  b. https://www.freecodecamp.org/news/learn-es6-the-dope-way-part-iv-default-parameters-destructuring-assignment-a-new-es6-method-44393190b8c9/
+  c. https://www.freecodecamp.org/news/learn-es6-the-dope-way-part-v-classes-browser-compatibility-transpiling-es6-code-47f62267661/

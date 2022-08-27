@@ -5,12 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script src="10-debounce.js" defer></script>
+    <script src="11-throt.js" defer></script>
   </head>
   <body>
     <img src="./event-bubbling.png" alt="event bubbling" />
     <div>
       <button>Like Me</button>
       <a href="http://www.google.com">Google</a>
+    </div>
+    <div>
+      <!--onkeyup means te getData funciton will be called everytime finish typing something in the text box.-->
+      <input type="text" name="" id="search" onkeyup="betterunction()" />
+      <button id="myid" onclick="newFun()">Hello</button>
     </div>
   </body>
   <!-- <script src="./01-asynchronousjs.js"></script> -->
@@ -20,5 +27,7 @@
   <!-- <script src="06-events.js"></script> -->
   <!-- <script src="07-cur.js"></script> -->
   <!-- <script src="08-cur1.js"></script> -->
-  <script src="09-memo.js"></script>
+  <!-- <script src="09-memo.js"></script> -->
+  <!-- <script src="10-debounce.js"></script> -->
+  <!-- <script src="11-throt.js"></script> -->
 </html>
