@@ -31,6 +31,7 @@ let - These are block scoped. These act as normal variables. We cannot redeclare
 
 const - Same as let but once assigned cannot be reassigned. const must be defined while being declared.
 
+- All var, let and const get hoisted but a little differently. In case of var, while getting hoisted, undefined is assigned to it. But in case of let and const, while being hoisted they are kept in Temporal dead zone until they are getting defined.
 ===============
 Data Types:
 ===============
@@ -40,7 +41,7 @@ Data Types:
 4. Null
 5. Undefined (!= Not defined)
 6. Object (Array is also considered as a Object in JS)
-7. Symbol
+7. Symbol 12246
 8. BigInt
 
 ===============
