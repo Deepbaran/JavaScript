@@ -125,3 +125,5 @@ Links:
   a. https://www.freecodecamp.org/news/learn-es6-the-dope-way-part-ii-arrow-functions-and-the-this-keyword-381ac7a32881/
   b. https://www.freecodecamp.org/news/learn-es6-the-dope-way-part-iv-default-parameters-destructuring-assignment-a-new-es6-method-44393190b8c9/
   c. https://www.freecodecamp.org/news/learn-es6-the-dope-way-part-v-classes-browser-compatibility-transpiling-es6-code-47f62267661/
+15. Document - https://developer.mozilla.org/en-US/docs/Web/API/Document
+16. Window - https://developer.mozilla.org/en-US/docs/Web/API/Window
