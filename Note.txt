@@ -62,12 +62,14 @@ Methods to grab HTML elements: [Read more]
 3. document.getElementsByClass()
 4. document.querySelector()
 5. document.querySelectorAll()
+5. document.createElement()
 
 elements:
 ---------
 - innerHTML is used to grab the inner HTML element or content inside the element.
 - innerText is used to grab the inner Text of the element.
 - style is used to change the CSS of the element.
+- We can use textContent to add text inside a tag.
 
 +++++++++++++++
 Personal Notes:
