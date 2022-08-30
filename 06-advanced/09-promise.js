@@ -56,3 +56,22 @@ const callMe = async () => {
 };
 
 callMe();
+
+//Promise --> async-await:
+function getMessage() {
+  return new Promise(resolve => resolve("hello world"));
+}
+
+function main() {
+  //Promise chain to get the message from Promise
+  getMessage().then(res => console.log(res));
+}
+async function main2() {
+  //Async-await: wiating for the Promise to get resolved or rejected.
+  const message = await getMessage();
+  console.log(message);
+}
+main();
+main2();
+console.log(3); //THis will get executed before main() and main2() as they are asynchronous.
+//Both promise chaining and async-await are asynchronous.
