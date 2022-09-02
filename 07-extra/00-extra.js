@@ -40,3 +40,6 @@ console.log(Math.min(num2, num3)); //5
 var arr3 = [1, 3, 4, 12, -1, 0, 93];
 console.log(Math.max(...arr3)); //93
 console.log(Math.min(...arr3)); //-1
+
+console.log(Number.MAX_VALUE); //1.7976931348623157e+308
+console.log(Number.MIN_VALUE); //5e-324
