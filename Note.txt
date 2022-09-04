@@ -41,7 +41,7 @@ Data Types:
 4. Null
 5. Undefined (!= Not defined)
 6. Object (Array is also considered as a Object in JS)
-7. Symbol 12246
+7. Symbol
 8. BigInt
 
 ===============
@@ -75,37 +75,71 @@ elements:
 Personal Notes:
 +++++++++++++++
 - Debugging: Inspect > Sources > (Refresh + break point + Call stack)
+
 - JS is a loosely typed programming language.
+
 - Interpolation: JavaScript string interpolation is the process of embedding an expression into part of a string. A template literal is used to embed expressions. You can add values such as variables and mathematical calculations into a string using interpolation.
+
 - Use template literals (``) when adding variables into strings instead of string literals ('').
+
 - Strings are immutable in JS.
+
 - Even if an array or object are assigned as const, we can change the values inside it as the const variable is referring the object stored in the memory and not it's values.
+
 - Technically Functions are considered as a Scope in HS and the others with {} such as loops and conditionals are not considered as a scope.
+
 - For all REGULAR FUNCTION CALLS, this points to window object or the global object.
+
 - DOM (Document Object Model): The Document Object Model (DOM) is an application programming interface (API) for HTML and XML documents. It defines the logical structure of documents and the way a document is accessed and manipulated.
+
 - Everything is a doument in DOM.
+
 - The DOM API is one of the multiple web APIs built into web browsers.
+
 - Two main APIs in DOM are document and window.
+
 - In JavaScript everyting is kind of object (including functions).
+
 - Arrays are a special type of objects. The typeof operator in JavaScript returns "object" for arrays. But, JavaScript arrays are best described as arrays.
+
 - Arrays are Objects in JS.
+
 - Nearly all objects in JavaScript are instances of Object; a typical object inherits properties (including methods) from Object.prototype
+
 - __proto__ shows the attributes inherited by the child object from its parent and the parent's __proto__ shows the attributes it inherited from it's parent and it goes on till the __proto__ becomes null and this chain of __proto__ is called prototype chaining.
+
 - In functional programming functions are used as varaibles.
+
 - JavaScript is a single-threaded language, which means it has only one call stack that is used to execute the program.
+
 - undefined is not an object if JS. But Null is an object.
+
 - UTF-16 allows us to include chinese, korean, japanese, etc characters as well as emojis.
+
 - JS catches runtime errors only.
+
 - Use Asynchronous code whenever fetching API. During usage of axios or fetch we use Asynchronous JS.
+
 - Whenever a object is coming, always check if that object is undefined or null using ternary operator. (Basically do a null check)
+
 - DO debugging in the chrome browser's Sorces tab > page folder. Then put a break point and refresh the page.
+
 - "use strict": It is not a statement, but a literal expression, ignored by earlier versions of JavaScript. The purpose of "use strict" is to indicate that the code should be executed in "strict mode". With strict mode, you can not, for example, use undeclared variables.
+
 - We use the script tag at the end of body so that JS gets loaded after all the contents of the page is loaded. We can declare the script tag in head by using a boolean attribute defer.
+
 - defer: This Boolean attribute is set to indicate to a browser that the script is meant to be executed after the document has been parsed, but before firing DOMContentLoaded. Scripts with the defer attribute will prevent the DOMContentLoaded event from firing until the script has loaded and finished evaluating. This attribute must not be used if the src attribute is absent (i.e. for inline scripts), in this case it would have no effect. To achieve a similar effect for dynamically inserted scripts use async="false" instead. Scripts with the defer attribute will execute in the order in which they appear in the document.
+
 - "tree shaking" in JavaScript means removing the code that are not used anymore from the codebase.
+
 - Take Rest operator as the returned function's argument whenever returning a function, even if does not take any parameters.
+
 - setTimeout takes more time to execute than console.log even if the delay time is 0ms. Because it is asynchronous.
+
 - Asynchronous code takes more time to execute than non-asynchronous code.
+
+- In ES6 if the key and value of an object have the same varaibleName, then no need to define them diferently. We can define them at once.
+obj={val: val} --> obj = {val}
 
 +++++++++++++++
 Links:
