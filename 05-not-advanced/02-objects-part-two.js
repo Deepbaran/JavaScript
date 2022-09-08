@@ -19,3 +19,10 @@ var sam = Object.create(User, {
   courseCount: { value: 3 }
 }); //Assiginig values to attributes and adding more attributes to the prototype
 sam.getUserName();
+
+var obj = {
+  name: "Deep",
+  lastName: "Kar"
+};
+console.log(Object.keys(obj));
+console.log(Object.values(obj));
