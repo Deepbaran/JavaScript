@@ -43,3 +43,24 @@ console.log(Math.min(...arr3)); //-1
 
 console.log(Number.MAX_VALUE); //1.7976931348623157e+308
 console.log(Number.MIN_VALUE); //5e-324
+
+console.log("a".charCodeAt(0)); //97
+
+//Getters and Setters in the object
+const obj = {
+  firstName: "Deep",
+  lastName: "Kar",
+  get name() {
+    //getter
+    return `${this.firstName}baran ${this.lastName}`;
+  },
+  set name(newName) {
+    //setter
+    const [firstName, lastName] = newName.split(" ");
+    this.firstName = `${firstName}baran`;
+    this.lastName = lastName;
+  }
+};
+console.log(obj.name); //Deepbaran Kar //getter is called
+obj.name = "Deep Kar"; //setter is called
+console.log(obj.name); //Deepbaranbaran Kar
