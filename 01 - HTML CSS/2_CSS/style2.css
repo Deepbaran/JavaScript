@@ -1,0 +1,31 @@
+.container {
+    background-color: coral;
+    border: 10px solid black;
+  }
+  
+  .box{
+  background-color: lightblue;
+  padding: 5px 10px 10px 5px;
+  margin: 10px 20px 20px 10px;
+  width: 120px;
+  height: 120px;
+  box-shadow: 2px 2px 2px black;
+  }
+  
+  .box2{
+  background-color: lightblue;
+  padding: 5px 10px 10px 5px;
+  margin: 10px 20px 20px 10px;
+  width: 120px;
+  height: 80px;
+  box-shadow: 2px 2px 2px black;
+  }
+
+.flex-container {
+    display: flex;
+    flex-direction: row; /*Direction in which the flex are going to get stacked*/
+    justify-content: center; /*Align the flex to a certain side*/
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-between;
+}

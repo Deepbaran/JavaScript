@@ -1,0 +1,221 @@
+++++++++++++++++++++++
+HTML Notes
+++++++++++++++++++++++
+Starting point of a website - index.html
+=================
+DOM:
+=================
+https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction
+DOM - Document Object Model
+
+Document
+    |
+    Root Element:
+    <html>
+        |
+        ---Element:
+        |   <head>
+        |       |
+        |       Element:
+        |       <title>
+        |           |
+        |           Text:
+        |           "My title"
+        |
+        ---Element:
+            <body>
+                |
+                ---Element---Attribute:
+                    <a>       href
+                        |
+                        Text:
+                        "Link text"
+
+=================
+Type of elements:
+=================      
+Inline Elements:
+---------------
+These elements get injected with other elements.
+
+Block Level Elements:
+---------------------
+These elements take up their own space.
+
+inline-block Level Elements:
+---------------------
+The element generates a block element box that will be flowed with surrounding content as if it were a single inline box (behaving much like a replaced element would).
+
+Self Closing Tags:
+----------------------
+- Self Closing elements do not require a closing tag. e.g - img, a, input.
+
+Pair Tags:
+----------
+- Pair tags require a closing tag. e.g. - html, head, body. 
+
+=================
+Forms:
+=================      
+Attributes:
+-----------
+method - It is the way how the form is going to be transported.
+
+action - It is the place where the form is going.
+
+get / GET - For get forms, the inserted form data is shown in the url. It is mainly used to fetch some data from the server. For GET, the page is not usually redirected to a new page, unless configured as such.
+
+post / POST - For post forms, the inserted form data is not shown in the url. It is used to post the data in the server DB. For POST, the page gets redirected by default.
+
+required - This boolean attribute makes sure that the particular input is filled at the time of submission.
+
+input:
+------
+type - defines the type of input form.
+
+name - This identifies the input form uniquely.
+
+placeholder - This works as a place holder in the input form and once clicked it goes away.
+
+value - This works similar to placeholder but instead of going away when clicked, it stays there and kind of acts as a default value for the input form.
+
+readonly - This is a boolean tag, if it is there then that input form cannot be edited.
+
+checkbox: We can select multiple options in case of checkboxs.
+
+checked - This boolean attribute makes a checkbox checked by default.
+
+radio: We can select any one from the provided radio buttons.
+
+- Give the same name to all checkboxes and radio buttons to make them associated with each other.
+
+- While using checkboxes and radio boxes use the id in the for attribute of the label to make it associated with the boxes and once from is submitted, the value is sent to the server.
+
+label:
+------
+- This is mainly used for screen readers.
+
+for - This determines for which input form this label is created. When screen readers click on it, it automatically selects the input form having the same name as the value in the for attribute of the label tag. This makes the texts associated with the correct input tags.
+
+Button:
+------
+type - This defines the special functionality of the button. For submit type, it submits all the values in the form and throws it in the server.
+
+============
+More Tags:
+============
+<figure> - Used to bind a img
+<figcaption> - Used to give caption to a img
+
+<fieldset> - Used to bind similar input tags.
+<legend> - Used to caption for the content in the fieldset.
+
+<label> - For input fields, put the input tags inside the label tags. For boxes (check and radio) put the label right of them and wrap the text of the boxes by label tag. Make sure the for attribute of the label tag is same as the id attribute of the input tags.
+
+============
+Links:
+============
+1. Semantic Tags - https://developer.mozilla.org/en-US/docs/Glossary/Semantics
+2. Boolean Attributes - https://meiert.com/en/blog/boolean-attributes-of-html/
+
+++++++++++++++++++++++
+CSS Notes
+++++++++++++++++++++++
+============
+Box Model:
+============
+top-bottom-left-right
+Only block elements have box model.
+display: block;
+-margin
+-border
+-padding
+-content [height & width || max-width & min-width]
+
+============
+Syntax:
+============
+selector {property1:value1; property2:value2;}
+
+import a css config/file inside a css file:
+@import url(url/path to the file/config);
+
+============
+Fonts:
+============
+- Google Fonts
+- Font awesome cdn
+
+- To import a font to the web page we can either use the <link> tag in the html or use @import url() in CSS to get import the configuring url to the web page.
+- After including the url, add the font-family of the CSS selector.
+
+1. Montserrat
+2. Oswald
+3. Roboto
+
+============
+Colors:
+============
+#RGB / #RRGGBB
+White Color - #fff / #ffffff
+Lower Pitch of Black - #1f1f1f
+
+============
+Media Queries:
+============
+- Media Queries are used to build responsive web pages.
+- Mainly used for Mobile First designs.
+
+Types:
+------
+1. screen
+2. print
+
+============
+Links:
+============
+1. Box shadow - https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
+2. Transition (Helps in transitioning a property when :hover is involved) - https://developer.mozilla.org/en-US/docs/Web/CSS/transition
+3. Child Selectors - https://www.w3schools.com/cssref/css_selectors.asp
+4. Pseudo classes in CSS - https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
+5. CSS Positioning - https://developer.mozilla.org/en-US/docs/Web/CSS/position
+6. CSS Units - https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units
+7. CSS Combinators - https://www.w3schools.com/css/css_combinators.asp#:~:text=The%20adjacent%20sibling%20selector%20is,%22%20means%20%22immediately%20following%22
+8. CSS Flexbox - https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+9. CSS grid - https://css-tricks.com/snippets/css/complete-guide-grid/
+10. Z-Index - https://developer.mozilla.org/en-US/docs/Web/CSS/z-index
+11. CSS Transform - https://developer.mozilla.org/en-US/docs/Web/CSS/transform
+12. Float - https://developer.mozilla.org/en-US/docs/Web/CSS/float
+13. Grid - https://developer.mozilla.org/en-US/docs/Web/CSS/grid
+14. display - https://developer.mozilla.org/en-US/docs/Web/CSS/display
+15. Box sizing - https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
+16. Position - https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning
+
+++++++++++++++++++++++
+Personal Notes
+++++++++++++++++++++++
+- All pages should begin with <!DOCTYPE html>. This special string is known as a declaration and ensures the browser tries to meet industry-wide specifications.
+- THESE ARE NOT ATTRIBUTES OF TAGS. THEY ARE CALLED ELEMENTS OF THE TAGS.
+- The name attribute of the boxes (checkbox and radio) should be same for them to associated with each other.  
+- Embedding pages using iframes is a huge security risk.
+- For adding depth we add box-shadow.
+- Navigation menus are created using unordered list.
+- While Analysing a web page divide it into rows and columns and try to figure out how you wold divide it into a table.
+- CSS Conflicts: For CSS and HTML the order that they are placed in affects the o/p. That means the later part will overwrite the previous parts. [css link (orderly) > <style> > inline]
+- ID should only be used for only 1 element and classes can be used for multiple elements in HTML and CSS.
+- z-index determines which element will be on top of which element in a web page.
+- It is recommended that for mobile view, give padding from left and right. Top and bottom are not necessary.
+- width property's value to be 80%, to make it 80% the width of its parent element
+- center the div horizontally, we can set margin-left and margin-right properties to auto.
+- inline-block elements only take up the width of their content
+- Add a max-width property to prevent it from growing too wide.
+- We can use -ve values for margin and padding to give a -ve effect to them.
+- To tell browsers how to encode characters on your page, set the charset to utf-8.
+
+++++++++++++++++++++++
+VSCode Shortcuts:
+++++++++++++++++++++++
+1. Duplicate a line: Alt+Shift+Down Arrow Key // Option+Cmd+Down Arrow Key
+3. Select Multiple lines: Ctrl+Alt+Shift+Down/Up Arrow Key
+4. Content wrapping: Alt+Z // Option+Z  
+5. Move a line up and Down - Alt+Up/Down Arrow Key

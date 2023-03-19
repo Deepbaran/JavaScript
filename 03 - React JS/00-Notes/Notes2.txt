@@ -1,0 +1,148 @@
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Theory:
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+==========
+What is React?
+==========
+React is Declarative:
+----------
+React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.
+
+React is Component-Based: (Main)
+----------
+Build encapsulated components that manage their own state, then compose them to make complex UIs. Examples of components are: Header, Footer, Navigation, Sidebar, etc. It helps our code to stay organised and scalable.
+There are two types of components:
+1. Class components
+2. Functional components
+
+==========
+SPA:
+==========
+A SPA or single-page application is a web application or website that interacts with the user by dynamically rewriting the current web page with new data from the web server, instead of the default method of a web browser loading entire new pages.
+
+Learn Once, Write Anywhere:
+----------
+You can develop new features in React without rewriting existing code.
+
+==========
+Data Flow:
+==========
+React has a uni directional Data flow. This means is that data can only be passed from a parent component to it's child component and not the other way around. Sibling components can also not share data.
+To overcome this we can either put all the data needed in the parent component beforehand or use Context API or any state management library like Redux.
+
+==========
+Props:
+==========
+Properties or props are a simple way to transfer  the information from one component(parent) to another component(child).
+
+==========
+State:
+==========
+State is a central place where we put all of our variables, all the things that we require and there is a proper way to update that state. 
+We always update State through proper channels or way. Never update anython in the state directly.
+Whenever state is changed, React re-renders that component.
+So, state is basically a place where evrything is stored, so that every update  goes through the state.
+
+==========
+Context API:
+==========
+Context provides a way to pass data through the component tree without having to pass props down manually at every level. People prefer Context API or Redux because it keeps the data and the business logicseparate. Context centralizes the data. And it is used for better state management.
+
+* createContext(): Used to create a Context API.
+
+* Provider: Provider has a value involved. Provider provaides that value for a Consumer to consume.
+
+* Consumer: Consumer consumes the value provided by the Provider.
+
+Proper way to use the Context API is to use it by implementing Reducer and Action. Context API with Reducer and Actions is basically the brain of the Application. Try to define it first. It is the business logic and keeps it separate.
+
+* Reducer: Reducer defines what the App should do when it gets a particular action from the Action file. It contains functions/methods based on the Action that it receives.
+
+* Action: Action is the place where we define what we want to do with our application.
+
+* dispatch: ???
+
+* useContext(): ???
+
+* useReducer(): ???
+
+Every action always has two things:
+1. type: It defines what it should do with it. basically the value that we assigned to it in the Action file.
+2. payload: It is the information that it carries along with it.
+
+==========
+Fragment:
+==========
+Fragment is a container in React and can act as a substitute of div in grouping elements.
+
+==========
+Keys: [https://reactjs.org/docs/lists-and-keys.html#keys]
+==========
+Keys help React identify which items have changed, are added, or are removed. Keys should be given to the elements inside the array to give the elements a stable identity.
+
+==========
+useEffect():
+==========
+By using this Hook, you tell React that your component needs to do something after render.
+
+==========
+Webpack:
+==========
+Bundler that converts your source code into production-ready output.
+Bundling is the process of taking many JavaScript files and combining them into one giant JavaScript file for the html to refer to. This is useful because the browser doesn’t natively support the import/export system that is used in React projects.
+
+==========
+Babel:
+==========
+A JavaScript transpiler to converts modern JavaScript into a production-ready version that's compatible with all browsers.
+Transpiling is the process of translating modern JavaScript code into a syntax that the browser actually supports. This is necessary because, as the JavaScript language evolves and adds new features, the browser must keep up and support those additions. Therefore, the feature set that the browser can support will always be a bit behind the overall JavaScript language.
+
+==========
+Redux:
+==========
+> Redux does state management.
+> Store: Collects the state of the entire React app.
+> Reducers: Describe sections of the store.
+> Actions: Objects full of data for the store.
+> Components take inputs or have buttons whose functionality creates Action objects and dispatch them to the Reducers and the Reducers update the Store. Components also have the ability to read the data of the Redux store.
+> In Redux, data has Unidirectional flow. That means that data flows from the store to all the components.
+> The Store is like a well defined and predictable function that is split up by its Reducers and the Action objects are inputs for that function, giving it a new data that will adapt the Stores.
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+File Structure: [F -> Folder; f -> file]
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+==========
+F: node_modules:
+==========
+Never touch. This folder is depemdent on package.json file. Whnever we need to install somethisng, we use "npm install <Module name>" and that module file or folder is installed here as well as the details are stored in the package.json file.
+
+==========
+F: public:
+==========
+It has a main file called "index.html" which has a div element with id "root". All the files inside the src file are compiled and get served inside that div element with id="root".
+
+==========
+F: src:
+==========
+It contains all of our code.
+
+==========
+f: package.json:
+==========
+It has all the information about the app, it's version, it's homepage when deployed, it's dependencies (modules installed) and it's scripts.
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+COMMANDS:
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+1. Create a react application:
+> npx create-react-app my-app [Creates the app]
+> cd my-app [Goes to the app directory]
+> npm start [Starts the development server]
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Tips:
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+> Keep data and business logic separate.
+> Use functionalities and components in different folders rather than putting everything in a single file.
+> Use Context API to centralize the data and use Reducer and Actions while implementing Context API.
+> For free JSON hosting temporarily got to myjson

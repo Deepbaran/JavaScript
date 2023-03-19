@@ -1,0 +1,87 @@
+* { /*Select the whole HTML file*/
+    background-color: lightblue;
+}
+
+body {
+    color: blue;
+}
+
+h1 {
+    background-color: yellow;
+}
+
+#deeps-h1 { /*id selector*/
+    color: red;
+}
+
+.fancy-border { /*class selector*/
+    border: 3px dashed red;
+    border-radius: 50px;
+}
+
+.purple-text {
+    color: red;
+}
+
+h2, h1 { /*Select both h2 and h1 elements*/
+    background-color: yellow;
+}
+
+ul > li { /*Select those li elements that are inside of a ul element*/
+    background-color: yellow;
+}
+
+ul li { /*Select those li elements that are descendant of a ul element*/
+    background-color: yellow;
+}
+
+h1 + p { /*p elements that are after a h1 element*/
+    background-color: blue;
+}
+
+[href] { /*All HTML elements that have the href attribute*/
+    background-color: orange;
+}
+
+li[title="lemons"] { /*All li items that have the title attribute with "lemons" value*/
+    background-color: orange;
+}
+
+[title*="lem"] { /*Any element that has the title attribute that contains "lem" in their values*/
+    background-color: orange;
+}
+
+input:checked { /*Any input that is checked. This is an example of the use of pseudo classes*/
+    box-shadow: 2px 2px 2px red;
+    background-color: orange;
+}
+
+input:focus { /*Any input that is focused. This is an example of the use of pseudo classes*/
+    box-shadow: 2px 2px 2px red;
+    background-color: orange;
+}
+
+input[type="checkbox"]:checked { /*All input having type attribute with value "checkbox" and is checked*/
+    box-shadow: 2px 2px 2px red;
+    background-color: orange;
+}
+
+h2:hover { /*Apply this to any h2 element that is being hovered over. :hover is a pseudo element.*/
+    background-color: orange;
+}
+
+ul > li:first-child { /*The first li item inside a ul item*/
+    background: green;
+}
+
+ul > li:last-child { /*The last li item inside a ul item*/
+    background: green;
+}
+
+ul > li:nth-last-child(2) { /*The Second to last li item inside a ul item*/
+    background: green;
+}
+
+ul > li:nth-child(2) { /*The Second li item inside a ul item*/
+    background: green;
+}

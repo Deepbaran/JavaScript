@@ -1,0 +1,127 @@
+body{
+  background-image: url('../img/bg.png'); /*Import bg img*/
+  background-image: center; /*Put the bg img in the center*/
+  background-size: cover; /*Make the img cover the bg*/
+  height: 100vh; /*Making the bg img same as the viewport height*/
+  margin: 0.5%;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  height: 20vh;
+}
+
+.nav-link {
+  text-decoration: none; /*Remove all default text-decorations*/
+  color: #ffffff;
+  font-size: 25px;
+}
+
+nav .nav-menu-icon {
+  display: none; /*Remove it from display*/
+}
+
+nav .nav-items {
+  display: flex;
+  flex: 2;
+  justify-content: space-between;
+  align-items: center; /*align the items at the center of the flexbox*/
+  list-style-type: none; /*Remove the bullet signs from the list*/
+}
+
+.brand-img {
+  flex: 1;
+  margin: auto;
+}
+
+.nav-logo {
+  display: block;
+}
+
+.brand-img img {
+  height: 80px; /*Adjusting height automatically scales width too*/
+}
+
+.nav-button {
+  background-color: #E03B8B;
+  border: none;
+  padding: 5px 40px;
+  border-radius: 25px;
+  cursor: pointer; /*pointer & grab*/
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  height: 80vh; /*Use 80% of the viewport height as the 20% is reserved by nav*/
+}
+
+.col{
+  display: flex;
+  flex: 0.5; /*Every col will get half the column portion*/
+}
+
+.col-2 {
+  overflow: hidden; /*Read more about it*/
+}
+
+.phone-img {
+  position: absolute; /*It will stay absolute to the position no matter what*/
+  bottom: 0; /*It will have 0 space from bottom, so at the bottom*/
+  right: 0; /*It will have 0 space from right, so at the right*/
+  height: 80%; /*It will have height of 80%*/
+}
+
+.col-1 {
+  flex-direction: column;
+  justify-content: center; /*center the content*/
+  align-items: flex-start;
+  color: #fff;
+}
+
+.col-1 p {
+  font-size: 25px;
+}
+
+.col-1 h1 {
+  font-size: 75px;
+  margin: 20px 0px;
+}
+
+.google-play-img {
+  height: 90px;
+}
+
+@media screen and (max-width:1230px) {
+  /*0 <= width <= 1230px*/
+  .phone-img {
+    height: 60%;
+  }
+
+  nav .nav-items {
+    display: none;
+  }
+
+  nav .nav-menu-icon {
+    display: block;
+    margin: auto;
+  }
+
+  nav .nav-menu-icon i {
+    color: #fff;
+    font-size: 30px; /*This increases the size of the icons too similar to text-align*/
+  }
+}
+
+@media screen and (max-width:900px) {
+  /*0 <= width <= 700px*/
+  .phone-img {
+    display: none;
+  }
+
+  .google-play-img {
+    height: 50px;
+  }
+}

@@ -1,0 +1,165 @@
+++++++++++++++++++++++++++++++++
+Personal Notes:
+++++++++++++++++++++++++++++++++
+- npm: npm stands for node package manager. It is used to manage packages.
+
+- Webpack: A bundler for javascript and friends. A bundler for javascript and friends. Packs many modules into a few bundled assets. Code Splitting allows to load parts for the application on demand. Through "loaders" modules can be CommonJs, AMD, ES6 modules, CSS, Images, JSON, Coffeescript, LESS, ... and your custom stuff. Webpack is grouped under "JS Build Tools / JS Task Runners". "Most powerful bundler", "Built-in dev server with livereload" and "Can handle all types of assets" are the primary reasons why Webpack is favored.
+
+- Babel: Use next generation JavaScript, today. Babel will turn your ES6+ code into ES5 friendly code, so you can start using it right now without waiting for browser support. Babel can be classified as a tool in the "JavaScript Compilers" category. "Modern Javascript works with all browsers", "Open source" and "Integration with lots of tools" are the key factors why developers consider Babel. Babe makes it possible for older browsers to run new JS syntax. {We can think of Babel as a big implementation of polyfills}
+
+- Transpiler: A source-to-source translator, source-to-source compiler (S2S compiler), transcompiler, or transpiler is a type of translator that takes the source code of a program written in a programming language as its input and produces an equivalent source code in the same or a different programming language. Babel is a JavaScript transpiler, meaning it converts a newer version of ECMAScript, such as ES9, to a standard version (ES5).
+
+- Compiler vs Transpiler: A compiler is a software that converts high-level language to low-level assembly language and we are all quite familiar with its name and work. A transpiler is another software, sometimes called a source-to-source compiler, which converts a high-level language to another high-level language.
+
+- REST API CONVENTION: (Follow this convention when writing requests to a server with REST API)
+ACTIONS          | HTTP Method | Endpoints
+Get all contacts | GET         | /contacts
+Create contact   | POST        | /contacts
+Update contact   | PUT         | /contacts/:id
+Delete contact   | DELETE      | /contacts/:id
+
+React Component:
+----------------
+- It is a reusable piece of code which can be reused at any point. It has its own inputs, its own outputs and it has its own functionality.
+
+Re-render:
+-----------
+State Change -> Compute Diff -> Re-render
+
+DOM:
+----------
+Document - HTML Document
+Object - elements like h1, head, body. These are objects in document api.
+Model - Complete Document or the Complete HTML structure.
+
+Event Handling: [They all take callbacks]
+---------------
+- onClick
+- onChange
+- onSubmit
+- onReset
+- onInvalid
+- onFocus
+- onBlur
+- onKeyUp
+- onKeyDown
+- onKeyPress
+- onError
+- onLoad
+- onSelect
+
+onClick={() => {
+            this.subscribe();
+          }}
+
+Why React Router:
+---------------
+- It helps us to navigate between different components, helps us to change the browser url, helps us to modify the browser history and maintains our page UI state without refreshing the browser.
+- If we do not put Routes or Switch (depending on the Router version), then Router will render those components too whose path are substrings of it's original path, including home ('/').
+
+- Switch or Routes will only check for the first path match that they get. If they find a match then they will not search for other routes. Example - If we wish to go to the /add url and we have put the home ('/') route before the add ('/add') route, then as soon as Switch or Routes get that home path is a substring of the expected path then it will not search for the proper add path and only the home component will render and not the add component. To solve this issue we should pass a prop called "exact". This will make sure that the exact path is matched and not a substring of it.
+
+- Link helps to make something clickable and clicking on that will take you to the path stated in the to prop. We can pass two things in to. One is the path and the 2nd is the data. 
+
+- We need to put all components in Route that are going to be used with some react-router-dom method so that react-router can track them.
+
+Setting up a fake JSON server api:
+---------------
+> npm init --yes
+> npm i --save json-server
+1. Create a db.json file to store the data.
+2. Remove the test script and this start script in package.json file: "start":"json-server -p 3006 -w db.json"
+> npm start <-- This will start the server.
+
+Ref:
+---------------
+- Refs provide a way to access DOM nodes or React elements created in the render method.
+
+- There are a few good use cases for refs:
+  1. Managing focus, text selection, or media playback.
+  2. Triggering imperative animations.
+  3. Integrating with third-party DOM libraries.
+  4. Avoid using refs for anything that can be done declaratively.
+For example, instead of exposing open() and close() methods on a Dialog component, pass an isOpen prop to it.
+
+Notes:
+------
+- Functional Components are called stateless components as initially we could not have state in them but now with hooks that is not the case.
+
+- Class components are called state components as from the initial days we caould manage states in them.
+
+- props are IMMUTABLE. Once props are defined we cannot change them.
+
+- Passing props from one component and then from component, pass that prop to another component and so on is called prop drilling.
+
+- To avoid prop drilling we can use context api or state management library like Redux or flux.
+
+- If you do not want a function to run at the time of rendering then rather than calling it, provide its reference.
+
+- We MUST PASS A KEY PROPS to render a LIST IN REACT. React differtiates and track the changes in the list items depending on that key.
+
+- To pass something from parent to child, we can pass a props. But to pass something from a child to parent we need to pass a callback so that we can use the closure concept to pass the value in the child to the parent.
+
+- Everytime any state changes in React ay component that is referring that state either directly or indirectly (by props, context or womething else) will reflect the changes.
+
+- We can destructure props at the time of receiving them in the Functional components. [({msg})]
+
+- Context API helps in creating Global state in React. When we create a global state, the main feature we need to keep in mind is that, the state can be updated from any child component that can access the global state.
+
+- Context API helps in removing props drilling.
+
+++++++++++++++++++++++++++++++++
+Refactoring:
+++++++++++++++++++++++++++++++++
+React-Router V6:
+-------------------
+- In React Router, Switch is replaced by Routes.
+
+- In Router v6 we no longer need to put exact prop.
+
+- In Router v6, we need to use element instead of component prop and pass a component (<componentName />) and not the name of the componen.
+
+- Unlike previous versions where we needed to pass a callback to pass props to components in Route, now in v6 as we are directly passing components, we can directly pass props.
+
+- With v6 we no longer need to worry about the component getting recreated everytime we visit the path while passing props. So, we no longer need render prop. 
+
+- In v6 we no longer send pathName and state as an object using a single to prop. Rather now we have two props to and state. to is used to define the path and state is used to define the data that is going to be passed. We can retreive the path using useLocation() hook.
+
+
+++++++++++++++++++++++++++++++++
+Packages:
+++++++++++++++++++++++++++++++++
+- Use this package to generate unique id for rendering lists:
+> npm i uuid4
+
+- React RouterDOM:
+> npm install react-router-dom --save
+
+- Install a fake json-server:
+> npm i --save json-server
+
+- Install Axios:
+> npm i --save axios
+
+- Install all packages depending on the package.json:
+> npm install
+
+- react-hhok-form:
+> npm install react-hook-form 
+
+++++++++++++++++++++++++++++++++
+Links:
+++++++++++++++++++++++++++++++++
+1. React Docs (Main Concepts, Advanced Concepts, API reference, React Hooks) - https://reactjs.org/docs/getting-started.html
+2. npm repo - https://www.npmjs.com/
+3. beta React docs - https://beta.reactjs.org/
+4. Redux - https://redux.js.org/
+5. React Fragment - https://reactjs.org/docs/fragments.html
+6. React rendering - https://dev.to/teo_garcia/understanding-rendering-in-react-i5i#virtualdom
+7. Strict Mode - https://reactjs.org/docs/strict-mode.html
+8. Synthetic Event - https://reactjs.org/docs/events.html
+
+++++++++++++++++++++++++++++++++
+Libraries:
+++++++++++++++++++++++++++++++++
+1. Validate Form - React-hook-form

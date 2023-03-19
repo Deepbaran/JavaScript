@@ -1,0 +1,321 @@
+*************************************************
+SHORTCUTS
+*************************************************
+** rce : Creates Class component
+
+** rfce : Creates Functional component
+
+** rconst : Creates constructor in class component
+*************************************************
+NOTES
+*************************************************
+
+** React is a JavaScript library that acts as the view part in the MVC (Model View Controller Architecture). That is, using React we can create UI components.
+- React is Declarative, Component-Based JS Library.
+-------------------------------------------------------
+** We can create same UI components without writing same codes again and again.
+-------------------------------------------------------
+** Virtual DOM : A virtual DOM is a lightweight JavaScript representation of the DOM used in declarative web frameworks such as React, Vue.js, and Elm. Updating the virtual DOM is comparatively faster than updating the actual DOM, since nothing has to be rendered onto the screen. (Refer to the Virtual_DOM.png file for better visualization). First virtual DOM is updated then the actual DOM is updated.
+-------------------------------------------------------
+** JSX: JavaScript XML. JavaScript Extension. It allows us to write HTML in React.
+-------------------------------------------------------
+** We can use {} to write expressions(variable values) in JSX.
+-------------------------------------------------------
+** Everything in React is a component.
+-------------------------------------------------------
+** React can return 1 parent element only. We cannot return multiple elements in React.
+-------------------------------------------------------
+** Components :
+React Components let you break up the UI into separate pieces that can then be reused and handled independantly. We can reuse components and we can reuse one component in another component too. (e.g: Header, Side Bar, Article HEading, Article Text, etc are all components). One Component can contain multiple HTML elements or multiple HTML objects. Each HTML object is in itself a component. One Componen can contain multiple components
+
+* Types of Components :
+- Functional Components (Stateless; We can use state too after v16.2.0)
+- Class Components (Stateful)
+
+* Functional component :
+1) Functional Components are basic JavaScript functions. These are typically arrow functions but can also be created with the regular function keyword.
+2) React lifeCycle methods (e.g: componentDidMount)cannot be used in functional components.
+3) There is no render method used in functional components.
+4) These are mainly responsible for UI and are typically presentational only (eg: a button component).
+5) Functional components can accept and use props.
+6) Functional Components should be favored if you do not need to make use of React state.
+
+* Class component : 
+1) Class components make use of ES6 class and extend the Component class in React.
+2) Sometimes calles "smart" or "stateful" components as they tend to implement logic and state.
+3) React lifeCyclemethods can be used inside class components (e.g: componentDidMount).
+4) You pass props down to class components and access them with 'this.props'.
+
+* Functional Component Vs Class Component : 
+1) Functional Component : 
+- Simple Function
+- Use Functional as much as possible
+- Mainly responsible for the UI and presentational only
+- Stateless but v16.7.0 - New Concepts Hooks, so states were added.
+2) Class Component :
+- Maintain their own private data - state
+- Provide lifeCycle hooks
+-------------------------------------------------------
+** Props : 
+* Props stands for properties. Props is a Object. It is passed as an argument to the component. Props passes all the attributes and children elements that we have given while using a particular component. Like name, class, etc. We can access the properties and the children elements that were given, in the components, using the props.
+
+* Once a value of props is set, it cannot be changed. That is, we can not reset the values of the Props from the Components. Props will only have the values that were passed during using that components. So, Props value cannot be changed. Hence, Props is immutable.
+
+* We need explicitly pass props as arguments in functional components. But in case of Class components, we do not need to explicitly pass props as a argument, we can access the props by {this.props.<props_name>}, because class has the scope of this.
+
+* Important Points : 
+- Props get passed to the component
+- Props are IMMUTABLE. Once assigned, we cannot change it inside the components to where the props is passed.
+- props - Function Component
+- this.props - Class Component
+-------------------------------------------------------
+** State :
+* State is an object. State is basically the values that we define inside the component. Unlike props whre properties are sent as arguments and cannot be reset, properties in state are defined in the component (in the constructor for Class component and using Hooks for Functional Component) so they can be reset. So, state is mutable. Although we can create state outside constructor too in case of Class components, but creating it inside a constructor is considered good practice.
+
+* Important Points : 
+- State is managed within the component
+- State can be changed (MUTABLE)
+- useState Hook -> Functional Component
+- this.state - Class Component
+- this.setState({key:val}) <-- Change state values in Class component.
+-------------------------------------------------------
+** Event Handler : 
+Event Handler handles all the events (e.g: mouse click, keyboard button click, etc). Like using onClick in buttons. In functional components, event handling should be the function name and not function call(function()).
+-------------------------------------------------------
+** bind() : 
+- 'this' cannot be accessed inside a function defined inside a class component. We need to use the bind() function inside the constructor to make the function inherit 'this'. Write this code in the construcotr : 
+'this.<function_name> = this.<function_name>.bind(this);'
+- It is not the case for arrow functions. Arrow functions automatically inherit 'this'. So, no need to bind() in case of arrow functions. 
+-------------------------------------------------------
+** Fragment : 
+React cannot return multiple elements. React can only return a single element and it's children elements. Fragment is used to group multiple elements without putting them in a parent element or without creating a extra node. Ways to use Fragment : 
+1) <React.Fragment></React.Fragment> - if React is imoprted.
+2) <Fragment></Fragment> - if {Fragment} is imported.
+3) <></> - some browsers might not support it.
+-------------------------------------------------------
+** Callback : 
+Callbacks are a great way to handle something after something else has been completed. Functions that are passed as arguments are called Callback Functions. Suppose, you want to call function B after function A is done. Then call function A as 'A(a,b,B);' and define A as : 
+const A = (a,b,B) => {
+  .....
+  .....
+  B();
+}
+-------------------------------------------------------
+** Key : 
+Key is like any other element. Just like we pass any element, we will pass key in the same way. Make sure that key is unique. So, after adding Key if we modify our list then Key helps us to tell React about the changes. List must not contain duplicate elements. Two keys cannot be same in same page. We cannot send key as props.
+- Key is just a string attribute. 
+- We need to add it to our component. 
+- We cannot pass it to another component from one component. 
+- Fragments declared with the explicit <React.Fragment> syntax may have keys. A use case for this is mapping a collection into an array of fragments.
+- Key is the only attribute that can be passed to Fragment.(as of now)
+- We must give unique key to all the elements when accessing the array elements in the JSX, otherwise there might be error.
+- key is a must for fetching data from API.
+
+* Each child in a list should have a unique 'key' prop.
+-------------------------------------------------------
+** CSS Modules :
+ CSS Modules are supported on React Script >V2
+ - This is used to make specific CSS for specific components.
+ - Try to use CSS Modules as much as possible.
+-------------------------------------------------------
+** Routing : 
+Routing is used to go to a different url without loading the page. It is used to build Single Page Applications (SPA).
+- The dependency that we need for Routing in React is : 
+react-router
+- Components provided by react-router : 
+1) link
+2) switch
+3) route
+4) router
+- Use the 'exact' property in the <Route></Route> element. It is a boolean element. When tru, will only match if the path matches the location or pathname exactly.
+-------------------------------------------------------
+** lifeCycle : 
+(Refer to 'https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/' and 'lifeCycle-methods.png' for a better visualization)
+All the methods in lifeCycle will be applied on the Class Component. Components have some lifeCycle methods that we can change as per our needs. We use lifeCycle methods when we wish to call some methods before any phase, then we call them as per our need. The flow of the lifeCycle methods are already decided.
+
+Types of methods in lifeCycle : 
+* Render Phase Methods : Pure and has no side effects. May be paused, aborted or restarted by React. Changes made by the methods in this phase is reflectd in the virtual DOM.
+
+* Pre-commit Phase Methods : Can Read the DOM
+
+* Commit Phase Methods : Can work with DOM, run side effects, schedule updates. Changes made by the methods in this phase is reflectd in the actual DOM.
+
+Phases in lifeCycle : 
+* Mounting : 
+In React, we can directly affect the DOM. The changes will be first done on virtual Done then they will be reflectd on the Real DOM. Each HTML or JSX that we are returning from a component is an element in itself. This element goes to the actual DOM through the virtual DOM.This whole process is called Mounting. So, the process of creating a new element in the actual DOM is called Mounting.
+Methods in Mounting : 
+- Render Phase :
+-- construcotr : use state, bind this to other methods, etc.
+-- getDerivedStateFromProps :  Do any changes that you need to do in props and state, here before render is called. This method is generally called when the value of the state is changed due to the value of the props. This is a static method. The value of state is dependant on the value of the props. state will have the same value as the props for the corresponding property and then state will be updated in the component. This method is generally used whenever we want to update the value of the state as per the updated value of the props.
+-- render : returns HTML or JSX elemets to the DOM.
+- Commit Phase :
+-- React updates DOM and refs
+-- componentDidMount : Any process that needs to be done after the element is rendered, is given here. USe this method whenever you need to get data from any web service.
+
+* Updating : 
+If we add some changes to the already created elements in the actual DOM, then this process is called Updating. Component is updated when either we changed the state or we changed the props.
+Methods in Updating : 
+- Render Phase :
+-- New props : Props are immutable.
+-- setState() : Change the state.
+-- forceUpdate()
+-- getDerivedStateFromProps
+-- render 
+- Pre-commit Phase : 
+-- getSnapShotBeforeUpdate
+- Commit Phase :
+-- React updates DOM and refs
+-- componentDidUpdate : Any process that needs to be done after the element is updated, is given here. 
+
+* Unmounting : 
+The process of deletion the element, from the actual DOM, that we created is called Unmounting.
+Methods in Unmounting : 
+- Commit Phase : 
+-- componentWillUnmount
+-------------------------------------------------------
+** For consumung API, use axios dependency : 
+'npm i axios'.
+------------------------------------------------------ 
+** Hooks : 
+* Hooks are the JavaScript functions, but they impose two additional rules : 
+- Only call Hooks at the top level. Don't call Hooks inside loops, conditions, or nested functions.
+- Only call Hooks from React function components. Don't call Hooks from regular JavaScript functions. (There is just one other valid place to call Hooks - your own custom Hooks.). 
+
+* Hooks are functions that let you "hook into" React state and lifecycle features from function components.
+Hooks allow you to use React without classes. It means you can use state and other React features without writing a class.
+React provides a few built-in Hooks like useState, useEffect etc.
+Hooks are a new addition in React 16.8
+When use Hooks : If you write a function component and realize you need to add some state to it.
+
+* useState : 
+Create and manipulate state in functional component.
+In industry standards, array destructuring is used for useState.
+
+* useEffect : 
+Whenever the element sent by the functional component is rendered, useEffect is automatically called. Whenever the element is created or updated, useEffect is called. useEffect does the same work for functional component as componentDidMount and componentDidUpdate does for class component. Hooks gives us this privilege.
+- useEffect hook method is the lifeCycle method of functional components.
+- useEffect is called automatically both times, when the element is created and when the element is updated.
+------------------------------------------------------ 
+** Context API : 
+Context provides a way to pass data through the component tree without having to pass props down manually at every level.
+In context API, there are mainly two things, Provider and Consumer. Provider is the one that is sending the data through the Context API and Consumer is the one for whom the data is sent through Context API.
+Provider -> Provides Context API
+Consumer -> Consumes Context API
+We can do the same thing with the help of props. But when a huge number of data needs to be sent down the component tree, Component API makes the work easier and it is used widely in the industry.
+It is very useful.
+Context API helps in passing data without props.
+------------------------------------------------------ 
+** Higher Order Component : 
+HOC is an advanced technique in React for reusing component logic. HOCs are not part of the React API. They are a pattern that emerges from React's compositional nature.
+Concretely, a HOC is a function that takes a component and returns a new component.
+Syntax : 
+'const EnhancedComponent = higherOrderComponent(WrappedComponent);'
+We use HOC in order to share common functionality between components.
+We will pass our component to the function, we will do some enhance and then we will return the enhanced fuction.
+HOC is useful for adding additional addons on the current component.
+*************************************************
+COMMANDS
+*************************************************
+- npm first installs the packages then execute them. npx directly executes the command.
+** Important Commands :
+1) Node Version : npm -v
+2) npm & npx version check : npx/npm -v
+
+** Create react app using npx : 
+1) npx create-react-app reactproject
+
+** Create react app using npm :
+1) npm install -g create-react-app
+2) npm init react-app my-app
+
+** Create app using yarn : 
+1) yarn global add create-react-app
+2) yarn create react-app my-app
+
+** Insstalling packages : 
+1) npm install --<package_name>
+
+** If having issues with starting React app after node reinstallation or something:
+1) The problem is with package.json, Install a package.json with the command "npm init" Then you must see a package.json file in the directory after confirming package.json try installing react-scripts with "npm install react-scripts", After successfull installation of react-scripts do a confirmation check again that under package.json you must have something like script: react-script. Then you are ready to go with creating your new react project.
+
+*************************************************
+'create-react-app' FILE STRUCTURE
+*************************************************
+
+** package.json : 
+1) react version
+2) scripts : start, build, test, eject
+3) It contains the react versions and scripts.
+
+** package-lock.json : 
+1) This is very very very important. If it is not autogenerated then install this command to create it :
+'npm install --package-lock'
+2) Details of all the dependencies that we install using npm and npx is stored here.
+3) It is a very Important file.
+
+** node_modules : 
+1) It has all the dependencies that we need for our projrcts.
+
+** All the new packages installed will be stored in node_modules and their details will be stored in package-lock.json.
+
+** public : 
+1) This is a very important directory, do not make any changes here.
+* index.html : 
+1) This is important. Don't change make any changeshere. You can change the header if you want to.
+2) The important thing here is the div element with id root. Never change it.
+3) The root element here is the main element that is manipulated to render components into the DOM.
+4) For adding CSS Librarie, Frameworks (Bootstrap), Font families, making the app SEO friendly, we edit this file. Never touch the root element.
+5) This is the start of execution which executes index.js
+
+** src : 
+* index.js : 
+1) This is the starting point of the application.
+2) This file will search for the div element with id='root' in index.html file in public directory.
+3) It is used to only render the components in the web page.
+
+* index.css : 
+1) This file styles the rendered components.
+
+* app.js : 
+1) This is a component that exports itself and gets imoprted by 'index.js' to be rendered in the web page.
+3) The code in here is basically used to store the contain the code that have the UI elements.
+
+* app.test.js : 
+1) This is used to run test cases on the component.
+
+*************************************************
+IMPORTANT TERMS
+*************************************************
+
+** <React.StrictMode> : 
+1) StrictMode is a tool for highlighting potential problems in an application. Like Fragment, StrictMode does not render any visible UI. It activates additional checks and warnings for its descendants.
+2) StrictMode checks are run in development mode only; they do not impact the production build.
+
+** <React.Fragment> : 
+1) A common pattern in React is for a component to return multiple elements. Fragments let yoou group a list of children without adding extra nodes to the DOM.
+
+** reportWebVitals() : 
+1) It is a performance relayer that allows you to measure and analyze the performance of your application using different metrics.
+2) Web Vitals are a set of useful metrics that aim to capture the user experience of a web page.
+3) In Create React App, a third-party library is used to measure these metrics (web-vitals).
+
+*************************************************
+HOST A REACT APP ON A ENTERPRISE SERVER [https://create-react-app.dev/docs/deployment/#github-pages]
+*************************************************
+
+* STEPS: [STEPS TO HOST THE REACT APP ON TOMCAT]
+1. add {"homepage": "localhost:8080/<appname>"} in package.json
+2. run "npm run build" in the cmd. This will create a optimized build bundle of the project.
+3. Go to Tomcat webapps folder.
+4. Create a new folder in the Tomcat webapps directory with the name <appname>.
+5. Copy paste all the files, in the newly created optimized build bundle, into the <appname> folder under Tomcat webapps directory.
+6. Start the Tomcat server and go to "localhost:8080/<appname>" url.
+
+*************************************************
+TO FETCH DATA FROM A LOCAL SERVER OR FROM THE SAME SERVER
+*************************************************
+
+* STEPS: [Fetch form a API hosted on Tomcat]
+1. Add {"proxy": "http://localhost:8080/<API_appname>/rest(for rest api)/"} in package.json
+2. Use the sub domain of the API {/<subdomain>} in axios.fetch, to fetch the API form the server.
+3. Use res.data to get the data from axios.fetch("/<subdomain>").then(res => {var a = res.data})

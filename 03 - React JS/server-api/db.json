@@ -1,0 +1,19 @@
+{
+  "contacts": [
+    {
+      "id": "4d3c7129-db4d-4486-95a3-a9df94dcbfdf",
+      "name": "Baran",
+      "email": "baran@gmail.com"
+    },
+    {
+      "id": "39aa41c9-31d6-4f96-8a77-a84961f78105",
+      "name": "Deep",
+      "email": "deep@gmail.com"
+    },
+    {
+      "id": "a658026b-03a5-4867-a611-b39aa380b1b4",
+      "name": "Deep2",
+      "email": "deep@outlook.com"
+    }
+  ]
+}

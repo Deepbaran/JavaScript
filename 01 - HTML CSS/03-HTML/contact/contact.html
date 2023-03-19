@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Welcome to contact page</h1>
+    <h3>You can reach us using this from</h3>
+    <h3><a href="../index.html">Home</a></h3>
+
+    <div id="contact-form">
+      <form action="server.php/contact" method="get">
+        <label for="fullname">Name</label>
+        <input type="text" name="fullname" placeholder="Full Name" />
+        <br />
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          placeholder="email@email.com"
+          readonly
+        />
+        <textarea name="details" id="" cols="30" rows="10"></textarea>
+
+        <!--Dropdown-->
+        <select name="language" id="" multiple>
+          <!--Multiple boolean attributes lets us select multiple options from the dropdown.-->
+          <!--While submitting the form, the value will be sent to the server-->
+          <option value="cpp">C++</option>
+          <option value="java">Java</option>
+          <option value="js">JavaScript</option>
+        </select>
+
+        <input
+          type="checkbox"
+          name="facebook"
+          value="Facebook"
+          id="facebook"
+          checked
+        />
+        <label for="facebook">Facebook</label>
+
+        <input type="checkbox" name="twitter" value="Twitter" id="twitter" />
+        <label for="twitter">Twitter</label>
+
+        <input type="checkbox" name="linkedin" value="Linkedin" id="linkedin" />
+        <label for="linkedin">Linkedin</label>
+
+        <input type="radio" name="preferences" value="Burger" id="burger" />
+        <label for="burger">Burger</label>
+
+        <input type="radio" name="preferences" value="Pizza" id="pizza" />
+        <label for="pizza">Pizza</label>
+
+        <input
+          type="radio"
+          name="preferences"
+          value="Chocolate"
+          id="chocolate"
+        />
+        <label for="chocolate">Chocolate</label>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

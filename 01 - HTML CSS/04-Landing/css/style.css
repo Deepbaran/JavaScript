@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap');
+
+body{
+  /*font-family: 'Montserrat', sans-serif;*/ /*If Montserrat is not available or if the url does not have configuration for it, then sans-serif will be used*/
+
+  background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+  /*liner-gradient allows us not to just paste ay colors but define gradients from top to bottom, bottom to top or variety of angles.
+  90deg / 180deg / 270deg
+  First-gradient start 0% with this color
+  Second-gradient start 100% with this color
+  */
+  color: #ffffff; /*Sets the font color*/
+}
+
+h1{
+  font-size: 70px;
+  text-align: center; /*Centers the text*/
+  margin-top: 20%;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+span {
+  color: #1f1f1f;
+  font-size: 100px;
+  font-weight: 900;
+}
+
+p {
+  text-align: center;
+  margin-top: -20px;
+  font-size: 18px;
+  letter-spacing: 3px;
+}
+
+button{
+  margin: auto;
+  display: block;
+}
+
+.btn {
+  background-color: transparent; /*Makes the background transparent*/
+  border: 2px solid #1f1f1f;
+  border-radius: 0.6em;
+  color: #1f1f1f;
+  font-size: 1rem;
+  padding: 1.2em 2.8em;
+  cursor: grab;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.btn:hover {
+  color: #ffffff;
+  outline: 0;
+}
+
+.lco {
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out; /*This property helps in smooth transitions. Keep adding the properties that you want to be affected when transition happens in what time frame and how it should happen.*/
+}
+
+.lco:hover {
+  box-shadow: 0 0 40px 40px #1f1f1f inset; /*offset-x offset-y blur-radius spread-radius color outset/inset(defines where the shadow will spread to.)*/
+}
+
+.footer {
+  color: #ffffff;
+  background-color: #1f1f1f;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+}

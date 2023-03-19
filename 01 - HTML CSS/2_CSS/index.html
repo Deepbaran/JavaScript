@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Style Tag-->
+    <style>
+        body {
+            color: green; /*body has a nore specific CSS style which is given priority*/
+            background-color: lightblue;
+        }
+
+        h1 {
+            color: green; /*first and seconf h1 has a more specific CSS style that contradicts the color property here which is why this color property is not givern priority by them. But third h1 element applies this CSS style as it doesn't have a more specific CSS style contradicting this style.*/
+        }
+    </style>
+    <title>CSS Tutorial</title>
+</head>
+<body style="color: blue; font-size: 20px">
+    <header>
+        <h1 style="color: red;">CSS Tutorial</h1>
+    </header>
+    <nav>
+        <a href="./page2.html">Page 2</a>
+        <a href="./page3.html">Page 3</a>
+        <a href="./page4.html">Page 4</a>
+    </nav>
+    <main>
+        <div>
+            <ul style="display: none; background-color: lightblue; padding: 15px; margin: 0px;">
+                <li style="display: inline;">Home</li>
+                <li style="display: inline;">About</li>
+                <li style="display: inline;">Contact Us</li>
+                <li style="display: inline;">Blogs</li>
+            </ul>
+        </div>
+        <div style="display: none; margin: 50px; border: 1px solid black; width: 80%; max-width: 500px;">
+            <p>This is a paragraph</p>
+        </div>
+        <div style="display: none; float: left; margin: 25px; padding: 50px 10px 50px 10px; background-color: lightblue;">
+            <p>Padding is extra space on the inside, margins are extra space on the outside</p>
+        </div>
+        <div style="position: fixed; bottom: 100px; width:90px; height:90px; background-color: blue;"></div>
+        <div style="width:100px; height:100px; background-color: red;"></div>
+        <div>
+            <h1 style="text-shadow: 2px 2px 5px red; position: relative; top:150px; left: 15px; color: black">CSS Tutorial</h1>
+            <img src="./CSS3_logo.png" width="250px" style="box-shadow: 2px 2px 5px black; border-radius: 50px; opacity: 0.4;">
+        </div>
+        <div>
+            <p style="color: blue; font-size: 2em; font-family: 'Courier', sans-serif; font-style: italic; font-variant: small-caps; font-weight: 800">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum quis consequatur eos optio a dolorem amet rem possimus? Labore doloremque soluta obcaecati voluptate veniam quia possimus asperiores, est animi ullam.</p>
+        </div>
+        <div>
+            <p>Style tags are a reat way to make using CSS easier!</p>
+        </div>
+        <div>
+            <h1>Using style tag.</h1>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </main>
+</body>
+</html>
+
+<!--
+    Inline Styling: This type of styling is a type of CSS styling that you can use inside your HTML.
+
+    CSS attributes are Key-Value Pairs.
+
+    The CSS style is applied to a HTML element is also inherited by it's child elements unless the chils elements have more specific CSS style applied to them that contradicts their parent's CSS style. 
+
+    ==> width: 100px; -> width defines the width of the content. By default the contant takes the entire width of the window.
+
+    ==> max-width: 500px; -> The content can be maximum of 500px, i.e the content can be only less than or equal to 500px and not more than that.
+------------------------------------------------------------------------------------------------------
+    CSS color methods:
+    i> color name
+    ii> hexcode -> #______
+    iii> rgb(_,_,_)
+    iv> rgba(_,_,_,_)
+    v> hsl(_,_,_)
+------------------------------------------------------------------------------------------------------
+    CSS Box-model:
+    i> Margin: Space outside of the element
+    ii> Border: Border of the element
+    iii> Padding: Space Between the border and the content of the element
+    iv> Content
+
+    using margin:
+    i> method1 ->
+        a> margin-top
+        b> margin-right
+        c> margin-bottom
+        d> margin-left
+    ii> method2 -> margin: top right left bottom; <- clockwise order
+    iii> method3 -> margin: top (right & left) bottom;
+    iv> method4 -> margin: (top & bottom) (right & left);
+    v> method5 -> margin: (top & right & left & bottom); <- one value is applied to all sides
+    margins can also have negative values. For example, "margin-top: -50;" will actually move the element upwards rather than pushing it down.
+
+    using border:
+    like margin border also has four sides and we can give different thickness, style and color to each side or just give all the same properties.
+    i> border: thickness style color;
+    ii> border-top: thickness style color;
+    iii> border-right: thickness style color;
+    iv> border-bottom: thickness style color;
+    v> border-left: thickness style color;
+
+    using padding:
+    using margin:
+    i> method1 ->
+        a> padding-top
+        b> padding-right
+        c> padding-bottom
+        d> padding-left
+    ii> method2 -> padding: top right left bottom;
+    iii> method3 -> padding: top (right & left) bottom;
+    iv> method4 -> padding: (top & bottom) (right & left);
+    v> method5 -> padding: (top & right & left & bottom); <- one value is applied to all sides
+
+    using content:
+    we can set width and height of the content using width and height attributes respectively.
+------------------------------------------------------------------------------------------------------
+    float & display:
+    float and display determine how a element is displayed and interact with other elements in the website.
+
+    float:
+    This property takes the different elements on the page and floats them on the different sides of the page. When we float an element, all the other elements that are around it, flow/wrap around it.
+
+    float values:
+    i> none (default)
+    ii> top
+    iii> left
+    iv> bottom
+    v> right
+
+    display:
+    The display property defines how the elements are displayed.
+
+    display types:
+    i> block (makes the elements, block-level elements)
+    ii> inline (makes the elements, inline elements)
+    iii> none: (The element will not be displayed on the page and will also not take up any space)
+-------------------------------------------------------------------------------------------------------
+    Different types of Position in CSS:
+    i> Static (Default): It positions an element according to the document flow.
+
+    ii> Relative: Take an element and position it relative to where it's supposed to be. We can use the "top","right","bottom" and "left" property of the CSS to position the element relative to where it is supposed to be, once we have set "position: relative". FOr example, "top: 20px" means that the element will postion itself 20px away from where it's top was supposed to be.
+
+    iii> Absolute: The element will position itself relative to the nearest positioned ancestor. In other words, if this element is inside of a container, it will position itself relative to that container. But otherwise (as in the example in this video) it posiotions itself relative to the entire document.
+
+    iv> Fixed: It positions an element relative to the viewport of the website.
+-------------------------------------------------------------------------------------------------------
+    opacity: 
+    It controls the transparency of the element. [0~1]
+
+    text-shadow: 
+    GIves shadow to the text. 
+    "text-shadow: horizontal-distance vertical-distance blurr-value shadow-color;"
+
+    box-shadow:
+    Does the same thing as text-shadow.
+
+    border-radius:
+    Sets the rasius of the border. It takes px and % both units and 50% border-radius makes the element circular.
+--------------------------------------------------------------------------------------------------------
+    Text & Fonts :=>
+    color:
+    Sets the color of the text.
+
+    font-size:
+    Sets the font size of the text. "em" is the recommended unit while setting font size.
+
+    font-family:
+    Sets the font family of the text. We can provide multiple font families and the browser will apply the first font family that is available from the list of the font families that we provided. If none of the font families that were provided is available then the browser will apply the defauls font family.
+
+    font-style:
+    Sets a font style to the text. For example, make the text italic, etc.
+
+    font-variant:
+    Seta a variation of the font to the text.
+
+    font-weight:
+    Sets weight to the text, i.e. makes the text more bolder or less bolder.
+    "font-weight: 800;" "font-weight: bold;"
+--------------------------------------------------------------------------------------------------------
+    css-selector {
+        attribute: value;
+    }
+--------------------------------------------------------------------------------------------------------
+    CSS style specificity:
+    The more specific the CSS style to an element, the higher the priority given to that CSS style by that element. 
+    Inline CSS > Style Tag > External CSS
+    id > class > tag name
+--------------------------------------------------------------------------------------------------------
+    Class:
+    There can be multiple elements having the same class-name. 
+    ID:
+    There can only be unique id's, i.e. no two elements can have same the id in a html page.
+
+    One HTML element ooocan even have multiple classes but it can only have a single id.
+    Classes and ID's are useful for apllying CSS styles to HTML.
+--------------------------------------------------------------------------------------------------------
+    Measurement units in CSS:
+    i> px -> pixel (It is generally used)
+    ii> % -> percentage (It is a relative size to the browser size)
+    iii> em -> Relative size to the user's browser value
+    iv> rem -> Relative size to the root element size
+-->

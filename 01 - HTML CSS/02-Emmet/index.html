@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #758283;
+      }
+      h1 {
+        background-color: #e03b8b; /*bgc*/
+        padding: 13px; /*pd*/
+        margin-top: 200px; /*mt*/
+        text-align: center; /*ta:c*/
+      }
+    </style>
+    <!-- link:favicon/css/... -> import the property defined here -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Hello from emmet</h1>
+    <!-- h1, h2, h3, h4, h5, h6 -->
+    <!-- h1{text} -> <h1>text</h1> -->
+    <!-- a{LCO} -> <a href="">LCO</a> -->
+    <!-- a:blank -> Whenever clicked on the link, a new blank page will open -->
+    <!-- embed -> embed source code -->
+    <!-- img -->
+
+    <!-- .center -->
+    <div class="center"></div>
+    <!-- #centered -->
+    <div id="centered"></div>
+    <!-- h3#brown.pink -->
+    <h3 id="brown" class="pink dark"></h3>
+    <!-- span.span.pink.center -->
+    <span class="span pink center"></span>
+
+    <!-- iframe -->
+    <iframe src="" frameborder="0"></iframe>
+
+    <!-- btn:d/r/s -->
+    <button>Home</button>
+    <!-- btn.primary.outline -->
+    <button class="primary outline">Hello</button>
+
+    <!-- form:get/post -->
+    <form action="" method="get"></form>
+    <form action="" method="post">
+      <!-- input -->
+      <input type="button" value="Deep" />
+      <!--
+        btn
+        checkbox
+        text
+        password
+        radio
+        color
+        datetime
+        email
+        file
+        hidden
+        submit
+        image
+      -->
+      <!-- Submit Button -> btn:s{Submit} -->
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- Child Relation -> ul>li*4 -->
+    <ul>
+      <li>One</li>
+      <li>Two</li>
+      <li>Three</li>
+      <li>Four</li>
+    </ul>
+
+    <!-- ul>li.item$*5 -->
+    <ul>
+      <li class="item1"></li>
+      <li class="item2"></li>
+      <li class="item3"></li>
+      <li class="item4"></li>
+      <li class="item5"></li>
+    </ul>
+
+    <!-- Sibling Relation (In the same DOM level) -> div+p+h3 -->
+    <div></div>
+    <p></p>
+    <h3></h3>
+
+    <!-- Grouping -> div>(header>ul>li*3>a)+footer>p-->
+    <div>
+      <header>
+        <ul>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+        </ul>
+      </header>
+      <footer>
+        <p></p>
+      </footer>
+    </div>
+  </body>
+</html>
+
+<!--
+  HTML page loads from top to bottom.
+
+  head - It is part of the web page that we don't see but it actually impacts the web page and it loads everything first.
+
+  <meta> - These tags are used for SEO purposes.
+
+  * In emmet try clicking Tab key rather than the Enter Key.
+
+  <iframe>
+
+  <div> - Defines a section in a document (block-level)
+  <span> - Defines a section in a document (inline)
+
+  Semantic Tags - 
+-->
