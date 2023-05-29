@@ -1,0 +1,18 @@
++++++++++++++++++
+Commands & Configs:
++++++++++++++++++
+- Setting up Package JSON:
+    > npm init -y
+- Install Express:
+    > npm i express
+- Install nodemon as dev dependency (Lets us easily restart our server everytime we make changes)
+    > npm i --save-dev nodemon
+    > package.json > scripts > "devStart": "nodemon server.js" 
+    > npm run devStart <- This will run all our code in server.js file
+- Install EJS (View engine, to serve view files)
+    > npm i ejs
+
+++++++++++++++++++
+Topics
+++++++++++++++++++
+- Router

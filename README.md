@@ -1,6 +1,8 @@
 # JavaScript
 
 This repository contains all the JavaScript codes that I learned while starting to learn Frontend Development.
+This Repository started as only JS repo. But now it holds all of my initial notes on JS, React, Node, Testing JS and TypeScript.
+I promise to create different repos as I learn modern tech using JS.
 
 # Notes:
 
