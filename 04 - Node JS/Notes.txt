@@ -5,8 +5,8 @@ Commands & Configs:
     > npm init -y
 - Install Express:
     > npm i express
-- Install nodemon as dev dependency (Lets us easily restart our server everytime we make changes)
-    > npm i --save-dev nodemon
+- Install nodemon as dev dependency [These do not go into production] (Lets us easily restart our server everytime we make changes)
+    > npm i --save-dev dotenv nodemon
     > package.json > scripts > "devStart": "nodemon server.js" 
     > npm run devStart <- This will run all our code in server.js file
 - Install EJS (View engine, to serve view files)
