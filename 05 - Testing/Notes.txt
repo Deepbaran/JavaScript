@@ -1,0 +1,6 @@
+> npm init -y
+> npm i --save-dev jest [Save Jest as a development dependency, to make sure everyting runs in developmnet setting]
+
+- Update the "test" script in package.json to:
+    "test": "jest --coverage"
+With this now, when we run, "npm test", it will run jest and run all of our test. Also will show coverage
